@@ -1,0 +1,1785 @@
+[
+    {  
+        "model": "inmofacil_app.region",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arica y Parinacota"
+        }
+    },
+    {   
+        "model": "inmofacil_app.region",
+        "pk": 2,
+        "fields": {
+            "nombre": "Tarapacá"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 3,
+        "fields": {
+            "nombre": "Antofagasta"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 4,
+        "fields": {
+            "nombre": "Atacama"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 5,
+        "fields": {
+            "nombre": "Coquimbo"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 6,
+        "fields": {
+            "nombre": "Valparaíso"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 7,
+        "fields": {
+            "nombre": "Región del Libertador Gral. Bernardo O’Higgins"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 8,
+        "fields": {
+            "nombre": "Región del Maule"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 9,
+        "fields": {
+            "nombre": "Región de Ñuble"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 10,
+        "fields": {
+            "nombre": "Región del Biobío"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 11,
+        "fields": {
+            "nombre": "Región de la Araucanía"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 12,
+        "fields": {
+            "nombre": "Región de Los Ríos"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 13,
+        "fields": {
+            "nombre": "Región de Los Lagos"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 14,
+        "fields": {
+            "nombre": "Región Aisén del Gral. Carlos Ibáñez del Campo"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 15,
+        "fields": {
+            "nombre": "Región de Magallanes y de la Antártica Chilena"
+        }
+    },
+    {
+        "model": "inmofacil_app.region",
+        "pk": 16,
+        "fields": {
+            "nombre": "Región Metropolitana de Santiago"
+        }
+    },
+
+
+    {  
+        "model": "inmofacil_app.comuna",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arica",
+            "region_id": 1 
+        }
+    },
+    {   
+        "model": "inmofacil_app.comuna",
+        "pk": 2,
+        "fields": {
+            "nombre": "Camarones",
+            "region_id": 1 
+
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 3,
+        "fields": {
+            "nombre": "Antofagasta",
+            "region_id": 1 
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 4,
+        "fields": {
+            "nombre": "Putre",
+            "region_id": 1
+
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 5,
+        "fields": {
+            "nombre": "General Lagos",
+            "region_id": 1
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 6,
+        "fields": {
+            "nombre": "Iquique",
+            "region_id": 2
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 7,
+        "fields": {
+            "nombre": "Alto Hospicio",
+            "region_id": 2
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 8,
+        "fields": {
+            "nombre": "Pozo Almonte",
+            "region_id": 2
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 9,
+        "fields": {
+            "nombre": "Camiña",
+            "region_id": 2
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 10,
+        "fields": {
+            "nombre": "Colchane",
+            "region_id": 2
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 11,
+        "fields": {
+            "nombre": "Huara",
+            "region_id": 2
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 12,
+        "fields": {
+            "nombre": "Pica",
+            "region_id": 2
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 13,
+        "fields": {
+            "nombre": "Antofagasta",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 14,
+        "fields": {
+            "nombre": "Mejillones",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 15,
+        "fields": {
+            "nombre": "Sierra Gorda",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 16,
+        "fields": {
+            "nombre": "Taltal",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 17,
+        "fields": {
+            "nombre": "Calama",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 18,
+        "fields": {
+            "nombre": "Ollagüe",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 19,
+        "fields": {
+            "nombre": "San Pedro de Atacama",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 20,
+        "fields": {
+            "nombre": "Tocopilla",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 21,
+        "fields": {
+            "nombre": "María Elena",
+            "region_id": 3
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 22,
+        "fields": {
+            "nombre": "Copiapó",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 23,
+        "fields": {
+            "nombre": "Caldera",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 24,
+        "fields": {
+            "nombre": "Tierra Amarilla",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 25,
+        "fields": {
+            "nombre": "Chañaral",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 26,
+        "fields": {
+            "nombre": "Diego de Almagro",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 27,
+        "fields": {
+            "nombre": "Vallenar",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 28,
+        "fields": {
+            "nombre": "Alto del Carmen",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 29,
+        "fields": {
+            "nombre": "Freirina",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 30,
+        "fields": {
+            "nombre": "Huasco",
+            "region_id": 4
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 31,
+        "fields": {
+            "nombre": "La Serena",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 32,
+        "fields": {
+            "nombre": "Coquimbo",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 33,
+        "fields": {
+            "nombre": "Andacollo",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 34,
+        "fields": {
+            "nombre": "La Higuera",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 35,
+        "fields": {
+            "nombre": "Paihuano",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 36,
+        "fields": {
+            "nombre": "Vicuña",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 37,
+        "fields": {
+            "nombre": "Illapel",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 38,
+        "fields": {
+            "nombre": "Canela",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 39,
+        "fields": {
+            "nombre": "Los Vilos",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 40,
+        "fields": {
+            "nombre": "Salamanca",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 41,
+        "fields": {
+            "nombre": "Ovalle",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 42,
+        "fields": {
+            "nombre": "Combarbalá",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 43,
+        "fields": {
+            "nombre": "Monte Patria",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 44,
+        "fields": {
+            "nombre": "Punitaqui",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 45,
+        "fields": {
+            "nombre": "Río Hurtado",
+            "region_id": 5
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 46,
+        "fields": {
+            "nombre": "Valparaíso",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 47,
+        "fields": {
+            "nombre": "Casablanca",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 48,
+        "fields": {
+            "nombre": "Concón",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 49,
+        "fields": {
+            "nombre": "Juan Fernández",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 50,
+        "fields": {
+            "nombre": "Puchuncaví",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 51,
+        "fields": {
+            "nombre": "Quintero",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 52,
+        "fields": {
+            "nombre": "Viña del Mar",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 53,
+        "fields": {
+            "nombre": "Isla de Pascua",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 54,
+        "fields": {
+            "nombre": "Los Andes",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 55,
+        "fields": {
+            "nombre": "Calle Larga",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 56,
+        "fields": {
+            "nombre": "Rinconada",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 57,
+        "fields": {
+            "nombre": "San Esteban",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 58,
+        "fields": {
+            "nombre": "La Ligua",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 59,
+        "fields": {
+            "nombre": "Cabildo",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 60,
+        "fields": {
+            "nombre": "Papudo",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 61,
+        "fields": {
+            "nombre": "Petorca",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 62,
+        "fields": {
+            "nombre": "Zapallar",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 63,
+        "fields": {
+            "nombre": "Quillota",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 64,
+        "fields": {
+            "nombre": "La Calera",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 65,
+        "fields": {
+            "nombre": "Hijuelas",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 66,
+        "fields": {
+            "nombre": "La Cruz",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 67,
+        "fields": {
+            "nombre": "Nogales",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 68,
+        "fields": {
+            "nombre": "San Antonio",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 69,
+        "fields": {
+            "nombre": "Algarrobo",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 70,
+        "fields": {
+            "nombre": "Cartagena",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 71,
+        "fields": {
+            "nombre": "El Quisco",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 72,
+        "fields": {
+            "nombre": "El Tabo",
+            "region_id": 6
+        }
+    },
+    
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 73,
+        "fields": {
+            "nombre": "Santo Domingo",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 74,
+        "fields": {
+            "nombre": "San Felipe",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 75,
+        "fields": {
+            "nombre": "Catemu",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 76,
+        "fields": {
+            "nombre": "Llaillay",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 77,
+        "fields": {
+            "nombre": "Panquehue",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 78,
+        "fields": {
+            "nombre": "Putaendo",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 79,
+        "fields": {
+            "nombre": "Santa María",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 80,
+        "fields": {
+            "nombre": "Quilpue",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 81,
+        "fields": {
+            "nombre": "Limache",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 82,
+        "fields": {
+            "nombre": "Olmué",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 83,
+        "fields": {
+            "nombre": "Villa Alemana",
+            "region_id": 6
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 84,
+        "fields": {
+            "nombre": "Rancagua",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 85,
+        "fields": {
+            "nombre": "Codegua",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 86,
+        "fields": {
+            "nombre": "Coinco",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 87,
+        "fields": {
+            "nombre": "Coltauco",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 88,
+        "fields": {
+            "nombre": "Doñihue",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 89,
+        "fields": {
+            "nombre": "Graneros",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 90,
+        "fields": {
+            "nombre": "Las Cabras",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 91,
+        "fields": {
+            "nombre": "Machalí",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 92,
+        "fields": {
+            "nombre": "Malloa",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 93,
+        "fields": {
+            "nombre": "Mostazal",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 94,
+        "fields": {
+            "nombre": "Olivar",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 95,
+        "fields": {
+            "nombre": "Peumo",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 96,
+        "fields": {
+            "nombre": "Pichidegua",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 97,
+        "fields": {
+            "nombre": "Quinta de Tilcoco",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 98,
+        "fields": {
+            "nombre": "Rengo",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 99,
+        "fields": {
+            "nombre": "Requínoa",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 100,
+        "fields": {
+            "nombre": "San Vicente",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 101,
+        "fields": {
+            "nombre": "Pichilemu",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 102,
+        "fields": {
+            "nombre": "La Estrella",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 103,
+        "fields": {
+            "nombre": "Litueche",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 104,
+        "fields": {
+            "nombre": "Marchihue",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 105,
+        "fields": {
+            "nombre": "Navidad",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 106,
+        "fields": {
+            "nombre": "Paredones",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 107,
+        "fields": {
+            "nombre": "San Fernando",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 108,
+        "fields": {
+            "nombre": "Chépica",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 109,
+        "fields": {
+            "nombre": "Chimbarongo",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 110,
+        "fields": {
+            "nombre": "Lolol",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 111,
+        "fields": {
+            "nombre": "Nancagua",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 112,
+        "fields": {
+            "nombre": "Palmilla",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 113,
+        "fields": {
+            "nombre": "Peralillo",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 114,
+        "fields": {
+            "nombre": "Placilla",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 115,
+        "fields": {
+            "nombre": "Pumanque",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 116,
+        "fields": {
+            "nombre": "Santa Cruz",
+            "region_id": 7
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 117,
+        "fields": {
+            "nombre": "Talca",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 118,
+        "fields": {
+            "nombre": "Constitución",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 119,
+        "fields": {
+            "nombre": "Curepto",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 120,
+        "fields": {
+            "nombre": "Empedrado",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 121,
+        "fields": {
+            "nombre": "Maule",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 122,
+        "fields": {
+            "nombre": "Pelarco",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 123,
+        "fields": {
+            "nombre": "Pencahue",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 124,
+        "fields": {
+            "nombre": "Río Claro",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 125,
+        "fields": {
+            "nombre": "San Clemente",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 126,
+        "fields": {
+            "nombre": "San Rafael",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 127,
+        "fields": {
+            "nombre": "Cauquenes",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 128,
+        "fields": {
+            "nombre": "Chanco",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 129,
+        "fields": {
+            "nombre": "Pelluhue",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 130,
+        "fields": {
+            "nombre": "Curicó",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 131,
+        "fields": {
+            "nombre": "Hualañe",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 132,
+        "fields": {
+            "nombre": "Licantén",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 133,
+        "fields": {
+            "nombre": "Molina",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 134,
+        "fields": {
+            "nombre": "Rauco",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 135,
+        "fields": {
+            "nombre": "Romeral",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 136,
+        "fields": {
+            "nombre": "Sagrada Familia",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 137,
+        "fields": {
+            "nombre": "Teno",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 138,
+        "fields": {
+            "nombre": "Vichuquén",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 139,
+        "fields": {
+            "nombre": "Linares",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 140,
+        "fields": {
+            "nombre": "Colbún",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 141,
+        "fields": {
+            "nombre": "Longaví",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 142,
+        "fields": {
+            "nombre": "Parral",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 143,
+        "fields": {
+            "nombre": "Retiro",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 144,
+        "fields": {
+            "nombre": "San Javier",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 145,
+        "fields": {
+            "nombre": "Villa Alegre",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 146,
+        "fields": {
+            "nombre": "Yerbas Buenas",
+            "region_id": 8
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 147,
+        "fields": {
+            "nombre": "San Carlos",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 148,
+        "fields": {
+            "nombre": "San Fabián",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 149,
+        "fields": {
+            "nombre": "Coihueco",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 150,
+        "fields": {
+            "nombre": "Ñiquén",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 151,
+        "fields": {
+            "nombre": "San Nicolás",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 152,
+        "fields": {
+            "nombre": "Bulnes",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 153,
+        "fields": {
+            "nombre": "Chillán",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 154,
+        "fields": {
+            "nombre": "Chillán Viejo",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 155,
+        "fields": {
+            "nombre": "El Carmen",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 156,
+        "fields": {
+            "nombre": "Pemuco",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 157,
+        "fields": {
+            "nombre": "Pinto",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 158,
+        "fields": {
+            "nombre": "Quillón",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 159,
+        "fields": {
+            "nombre": "San Ignacio",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 160,
+        "fields": {
+            "nombre": "Yungay",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 161,
+        "fields": {
+            "nombre": "Quirihue",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 162,
+        "fields": {
+            "nombre": "Cobquecura",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 163,
+        "fields": {
+            "nombre": "Coelemu",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 164,
+        "fields": {
+            "nombre": "Ninhue",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 165,
+        "fields": {
+            "nombre": "Portezuelo",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 166,
+        "fields": {
+            "nombre": "Ránquil",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 167,
+        "fields": {
+            "nombre": "Treguaco",
+            "region_id": 9
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 168,
+        "fields": {
+            "nombre": "Concepción",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 169,
+        "fields": {
+            "nombre": "Coronel",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 170,
+        "fields": {
+            "nombre": "Chiguayante",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 171,
+        "fields": {
+            "nombre": "Florida",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 172,
+        "fields": {
+            "nombre": "Hualqui",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 173,
+        "fields": {
+            "nombre": "Lota",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 174,
+        "fields": {
+            "nombre": "Penco",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 175,
+        "fields": {
+            "nombre": "San Pedro de La Paz",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 176,
+        "fields": {
+            "nombre": "Santa Juana",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 177,
+        "fields": {
+            "nombre": "Talcahuano",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 178,
+        "fields": {
+            "nombre": "Tomé",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 179,
+        "fields": {
+            "nombre": "Hualpén",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 180,
+        "fields": {
+            "nombre": "Lebu",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 181,
+        "fields": {
+            "nombre": "Arauco",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 182,
+        "fields": {
+            "nombre": "Cañete",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 179,
+        "fields": {
+            "nombre": "Contulmo",
+            "region_id": 10
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 180,
+        "fields": {
+            "nombre": "Temuco",
+            "region_id": 11
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 181,
+        "fields": {
+            "nombre": "Saavedra",
+            "region_id": 11
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 182,
+        "fields": {
+            "nombre": "Pucón",
+            "region_id": 11
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 183,
+        "fields": {
+            "nombre": "Valdivia",
+            "region_id": 12
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 184,
+        "fields": {
+            "nombre": "Los Lagos",
+            "region_id": 12
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 185,
+        "fields": {
+            "nombre": "La Unión",
+            "region_id": 12
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 186,
+        "fields": {
+            "nombre": "Puerto Montt",
+            "region_id": 13
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 187,
+        "fields": {
+            "nombre": "Cochamó",
+            "region_id": 13
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 188,
+        "fields": {
+            "nombre": "Frutillar",
+            "region_id": 13
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 189,
+        "fields": {
+            "nombre": "Puerto Varas",
+            "region_id": 13
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 190,
+        "fields": {
+            "nombre": "Ancud",
+            "region_id": 13
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 191,
+        "fields": {
+            "nombre": "Couhaique",
+            "region_id": 14
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 192,
+        "fields": {
+            "nombre": "Aysén",
+            "region_id": 14
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 193,
+        "fields": {
+            "nombre": "O'higgins",
+            "region_id": 14
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 194,
+        "fields": {
+            "nombre": "Tortel",
+            "region_id": 14
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 195,
+        "fields": {
+            "nombre": "Punta Arenas",
+            "region_id": 15
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 196,
+        "fields": {
+            "nombre": "Río Verde",
+            "region_id": 15
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 197,
+        "fields": {
+            "nombre": "Antártica",
+            "region_id": 15
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 198,
+        "fields": {
+            "nombre": "Santiago",
+            "region_id": 16
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 199,
+        "fields": {
+            "nombre": "Cerro Navia",
+            "region_id": 16
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 200,
+        "fields": {
+            "nombre": "El Bosque",
+            "region_id": 16
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 199,
+        "fields": {
+            "nombre": "La Cisterna",
+            "region_id": 16
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 199,
+        "fields": {
+            "nombre": "Providencia",
+            "region_id": 16
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 200,
+        "fields": {
+            "nombre": "Las Condes",
+            "region_id": 16
+        }
+    },
+    {
+        "model": "inmofacil_app.comuna",
+        "pk": 199,
+        "fields": {
+            "nombre": "San Miguel",
+            "region_id": 16
+        }
+    }
+]
+
+    

@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from inmofacil_app.views import index, registro_inmueble, busqueda_inmueble, inmuebles_disponibles
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", index, name='index'),
+    path("registro_inmueble", registro_inmueble, name='registro_inmueble'),
+    path("busqueda_inmueble", busqueda_inmueble, name='busqueda_inmueble'),
+    path("inmuebles_disponibles", inmuebles_disponibles, name='inmuebles_disponibles'),
+    
 ]

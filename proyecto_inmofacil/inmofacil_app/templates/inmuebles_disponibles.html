@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block inmuebles_disponibles %}
+<h1>Inmuebles Disponibles</h1>
+<form method="GET">
+  {{ form.as_p }}
+  <button type="submit">Buscar</button>
+</form>
+
+<h2>Inmuebles Disponibles</h2>
+<ul>
+  {% for inmueble in inmuebles %}
+    <li>
+      <strong>{{ inmueble.nombre }}</strong><br>
+      {{ inmueble.descripcion }}<br>
+      {{ inmueble.direccion_id.calle }} {{ inmueble.direccion_id.numero }}, {{ inmueble.direccion_id.comuna_id.nombre }}<br>
+      {{ inmueble.tipo_inmueble }} - {{ inmueble.valor_mensual }} CLP
+    </li>
+  {% empty %}
+    <li>No hay inmuebles disponibles en esta comuna.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
