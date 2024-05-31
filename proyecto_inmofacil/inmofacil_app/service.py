@@ -68,3 +68,63 @@ def borrar_usuario(rut):
 
 def borrar_inmueble(inmueble_id):
     Inmueble.objects.filter(inmueble_id=inmueble_id).delete()
+
+
+
+# Función para listar inmuebles por comuna y guardar en un archivo de texto
+def listar_inmuebles_por_comuna():
+    # Realiza una consulta a la base de datos para obtener los campos 'nombre' y 'descripcion' del Inmueble, así como el nombre de la comuna relacionada.
+    inmuebles = Inmueble.objects.values('nombre', 'descripcion', 'direccion_id__comuna_id__nombre') #doble guion bajo (__) permite acceder a campos del modelo relacionado. permite acceder al nombre de la comuna a través de la relación de la dirección del inmueble (Direccion tiene una clave foránea a Comuna).
+
+    # Definimos la ruta del archivo donde guardaremos los resultados
+    file_path = 'inmuebles_por_comuna.txt'
+    
+    # Abrimos el archivo en modo escritura
+    with open(file_path, 'w') as file:
+        # Iteramos sobre los inmuebles obtenidos
+        for inmueble in inmuebles:
+            nombre = inmueble['nombre']
+            descripcion = inmueble['descripcion']
+            comuna = inmueble['direccion_id__comuna_id__nombre'] #accede al nombre de la comuna.
+
+            # Escribimos los detalles del inmueble en el archivo
+            file.write(f"Comuna: {comuna}\n")
+            file.write(f"    {nombre}: {descripcion}\n")
+            file.write("\n") # agrega un salto de linea entre comunas para mejor legibilidad
+
+    # Devolvemos el archivo generado
+    return file_path
+#desde la shell: 
+#>>> from inmofacil_app.service import listar_inmuebles_por_comuna
+#>>> archivo_generado = listar_inmuebles_por_comuna()
+#>>> print(f"Archivo generado: {archivo_generado}") retorna archivo geneardo y el nombre del archivo ('inmuebles_por_comuna.txt')
+#Archivo generado: inmuebles_por_comuna.txt
+
+# Función para listar inmuebles por región y guardar en un archivo de texto
+def listar_inmuebles_por_region():
+    inmuebles = Inmueble.objects.values('nombre', 'descripcion', 'direccion_id__comuna_id__region_id__nombre') #accede al nombre de la región (direccion tiene llave foránea de comuna y comuna tiene llave foránea de region pudiendo acceder a su nombre)
+    
+    file_path = 'inmuebles_por_region.txt'
+    
+    # Abrimos el archivo en modo escritura
+    with open(file_path, 'w') as file:
+       
+        # Iteramos sobre los inmuebles obtenidos
+        for inmueble in inmuebles:
+            nombre = inmueble['nombre']
+            descripcion = inmueble['descripcion']
+            region = inmueble['direccion_id__comuna_id__region_id__nombre']
+            
+            # Escribimos los detalles del inmueble en el archivo
+            file.write(f"Región: {region}\n")
+            file.write(f"    {nombre}: {descripcion}\n")
+            file.write("\n")
+            
+    # Devolvemos el archivo generado
+    return file_path
+
+#desde la shell
+#>>> from inmofacil_app.service import listar_inmuebles_por_region
+#>>> archivo_generado = listar_inmuebles_por_region()
+#>>> print(f"Archivo generado: {archivo_generado}")
+#Archivo generado: inmuebles_por_region.txt

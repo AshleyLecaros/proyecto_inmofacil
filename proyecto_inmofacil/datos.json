@@ -1750,7 +1750,7 @@
     },
     {
         "model": "inmofacil_app.comuna",
-        "pk": 199,
+        "pk": 201,
         "fields": {
             "nombre": "La Cisterna",
             "region_id": 16
@@ -1758,7 +1758,7 @@
     },
     {
         "model": "inmofacil_app.comuna",
-        "pk": 199,
+        "pk": 202,
         "fields": {
             "nombre": "Providencia",
             "region_id": 16
@@ -1766,7 +1766,7 @@
     },
     {
         "model": "inmofacil_app.comuna",
-        "pk": 200,
+        "pk": 203,
         "fields": {
             "nombre": "Las Condes",
             "region_id": 16
@@ -1774,7 +1774,7 @@
     },
     {
         "model": "inmofacil_app.comuna",
-        "pk": 199,
+        "pk": 204,
         "fields": {
             "nombre": "San Miguel",
             "region_id": 16

@@ -1,0 +1,18 @@
+Comuna: Arica
+    Casa en el Centro: Casa amplia y céntrica.
+
+Comuna: Quilpue
+    Casa en la Playa: Casa con vista al mar.
+
+Comuna: Zapallar
+    Departamento en el Centro: Departamento con excelente ubicación.
+
+Comuna: Chépica
+    Departamento en la Playa: Departamento con vista al mar.
+
+Comuna: Requínoa
+    Parcela Agrícola: Parcela ideal para cultivo.
+
+Comuna: La Calera
+    Parcela Recreativa: Parcela con áreas verdes y recreación.
+

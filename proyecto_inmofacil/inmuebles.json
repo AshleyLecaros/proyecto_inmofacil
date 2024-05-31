@@ -1,0 +1,248 @@
+[
+    {
+        "model": "inmofacil_app.direccion",
+        "pk": 1,
+        "fields": {
+            "calle": "Avenida Libertador",
+            "numero": "123",
+            "departamento": "0",
+            "comuna_id": 1
+        }
+    },
+    {
+        "model": "inmofacil_app.direccion",
+        "pk": 2,
+        "fields": {
+            "calle": "Calle Los Pinos",
+            "numero": "456",
+            "departamento": "0",
+            "comuna_id": 80
+        }
+    },
+    {
+        "model": "inmofacil_app.direccion",
+        "pk": 3,
+        "fields": {
+            "calle": "Calle Las Rosas",
+            "numero": "789",
+            "departamento": "303",
+            "comuna_id": 62
+        }
+    },
+    {
+        "model": "inmofacil_app.direccion",
+        "pk": 4,
+        "fields": {
+            "calle": "Avenida Siempre Viva",
+            "numero": "101",
+            "departamento": "404",
+            "comuna_id": 108
+        }
+    },
+    {
+        "model": "inmofacil_app.direccion",
+        "pk": 5,
+        "fields": {
+            "calle": "Calle Los Almendros",
+            "numero": "202",
+            "departamento": "0",
+            "comuna_id": 99
+        }
+    },
+    {
+        "model": "inmofacil_app.direccion",
+        "pk": 6,
+        "fields": {
+            "calle": "Avenida Principal",
+            "numero": "303",
+            "departamento": "0",
+            "comuna_id": 64
+        }
+    },
+    {
+        "model": "inmofacil_app.inmueble",
+        "pk": 1,
+        "fields": {
+            "nombre": "Casa en el Centro",
+            "descripcion": "Casa amplia y céntrica.",
+            "m2_contruidos": "120.5",
+            "m2_terreno": "150.0",
+            "cantidad_estacionamiento": "2",
+            "cantidad_baños": "2",
+            "direccion_id": 1,
+            "tipo_inmueble": "casa",
+            "valor_mensual": 500000.0
+        }
+    },
+    {
+        "model": "inmofacil_app.inmueble",
+        "pk": 2,
+        "fields": {
+            "nombre": "Casa en la Playa",
+            "descripcion": "Casa con vista al mar.",
+            "m2_contruidos": "200.0",
+            "m2_terreno": "300.0",
+            "cantidad_estacionamiento": "3",
+            "cantidad_baños": "3",
+            "direccion_id": 2,
+            "tipo_inmueble": "casa",
+            "valor_mensual": 700000.0
+        }
+    },
+    {
+        "model": "inmofacil_app.inmueble",
+        "pk": 3,
+        "fields": {
+            "nombre": "Departamento en el Centro",
+            "descripcion": "Departamento con excelente ubicación.",
+            "m2_contruidos": "80.0",
+            "m2_terreno": "80.0",
+            "cantidad_estacionamiento": "1",
+            "cantidad_baños": "1",
+            "direccion_id": 3,
+            "tipo_inmueble": "departamento",
+            "valor_mensual": 300000.0
+        }
+    },
+    {
+        "model": "inmofacil_app.inmueble",
+        "pk": 4,
+        "fields": {
+            "nombre": "Departamento en la Playa",
+            "descripcion": "Departamento con vista al mar.",
+            "m2_contruidos": "100.0",
+            "m2_terreno": "100.0",
+            "cantidad_estacionamiento": "1",
+            "cantidad_baños": "2",
+            "direccion_id": 4,
+            "tipo_inmueble": "departamento",
+            "valor_mensual": 400000.0
+        }
+    },
+    {
+        "model": "inmofacil_app.inmueble",
+        "pk": 5,
+        "fields": {
+            "nombre": "Parcela Agrícola",
+            "descripcion": "Parcela ideal para cultivo.",
+            "m2_contruidos": "0.0",
+            "m2_terreno": "10000.0",
+            "cantidad_estacionamiento": "0",
+            "cantidad_baños": "3",
+            "direccion_id": 5,
+            "tipo_inmueble": "parcela",
+            "valor_mensual": 200000.0
+        }
+    },
+    {
+        "model": "inmofacil_app.inmueble",
+        "pk": 6,
+        "fields": {
+            "nombre": "Parcela Recreativa",
+            "descripcion": "Parcela con áreas verdes y recreación.",
+            "m2_contruidos": "50.0",
+            "m2_terreno": "2000.0",
+            "cantidad_estacionamiento": "1",
+            "cantidad_baños": "2",
+            "direccion_id": 6,
+            "tipo_inmueble": "parcela",
+            "valor_mensual": 250000.0
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "11111111-1",
+        "fields": {
+            "nombre": "Juan",
+            "apellido": "Pérez",
+            "direccion_id": 1,
+            "telefono": "123456789",
+            "mail": "juan.perez@example.com",
+            "tipo_usuario": "arrendador"
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "22222222-2",
+        "fields": {
+            "nombre": "María",
+            "apellido": "González",
+            "direccion_id": 2,
+            "telefono": "987654321",
+            "mail": "maria.gonzalez@example.com",
+            "tipo_usuario": "arrendador"
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "33333333-3",
+        "fields": {
+            "nombre": "Carlos",
+            "apellido": "Ramírez",
+            "direccion_id": 3,
+            "telefono": "456123789",
+            "mail": "carlos.ramirez@example.com",
+            "tipo_usuario": "arrendador"
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "44444444-4",
+        "fields": {
+            "nombre": "Ana",
+            "apellido": "Martínez",
+            "direccion_id": 4,
+            "telefono": "321654987",
+            "mail": "ana.martinez@example.com",
+            "tipo_usuario": "arrendador"
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "55555555-5",
+        "fields": {
+            "nombre": "Luis",
+            "apellido": "Fernández",
+            "direccion_id": 5,
+            "telefono": "789123456",
+            "mail": "luis.fernandez@example.com",
+            "tipo_usuario": "arrendatario"
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "66666666-6",
+        "fields": {
+            "nombre": "Laura",
+            "apellido": "Rodríguez",
+            "direccion_id": 6,
+            "telefono": "654789321",
+            "mail": "laura.rodriguez@example.com",
+            "tipo_usuario": "arrendatario"
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "77777777-7",
+        "fields": {
+            "nombre": "Pedro",
+            "apellido": "Gómez",
+            "direccion_id": 1,
+            "telefono": "147258369",
+            "mail": "pedro.gomez@example.com",
+            "tipo_usuario": "arrendatario"
+        }
+    },
+    {
+        "model": "inmofacil_app.usuario",
+        "pk": "88888888-8",
+        "fields": {
+            "nombre": "Marta",
+            "apellido": "López",
+            "direccion_id": 2,
+            "telefono": "369258147",
+            "mail": "marta.lopez@example.com",
+            "tipo_usuario": "arrendatario"
+        }
+    }
+]

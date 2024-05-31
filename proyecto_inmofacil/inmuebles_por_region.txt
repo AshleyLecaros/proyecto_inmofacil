@@ -1,0 +1,18 @@
+Región: Arica y Parinacota
+    Casa en el Centro: Casa amplia y céntrica.
+
+Región: Valparaíso
+    Casa en la Playa: Casa con vista al mar.
+
+Región: Valparaíso
+    Departamento en el Centro: Departamento con excelente ubicación.
+
+Región: Región del Libertador Gral. Bernardo O’Higgins
+    Departamento en la Playa: Departamento con vista al mar.
+
+Región: Región del Libertador Gral. Bernardo O’Higgins
+    Parcela Agrícola: Parcela ideal para cultivo.
+
+Región: Valparaíso
+    Parcela Recreativa: Parcela con áreas verdes y recreación.
+
