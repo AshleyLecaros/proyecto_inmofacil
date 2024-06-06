@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from os import getenv
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,14 @@ SECRET_KEY = 'django-insecure-xl+ic#=%b#ld9(pn_o@%d#&mkik$d0+%9ry^zrbj8b6=o2!04u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Host de replit
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.replit.com',  # Dominio principal de Replit
+    '.janeway.replit.dev',  # Dominio de Janeway en Replit
+    'a3a8f634-39b0-4528-9688-37b23a8c2290-00-1f5ik2igsvdfq.janeway.replit.dev',  # mi dominio específico de Janeway
+]
 
 
 # Application definition
@@ -49,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'proyecto_inmofacil.urls'
 
@@ -74,15 +84,21 @@ WSGI_APPLICATION = 'proyecto_inmofacil.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# Cargar variables de entorno desde .env
+load_dotenv()
+
 DATABASES = {
-    'default': {
-        'ENGINE':'django.db.backends.postgresql',
-        'NAME': 'proyecto_inmofacil',
-        'USER': 'ashley',
-        'PASSWORD': 'isabella',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': getenv('PGDATABASE'),
+    'USER': getenv('PGUSER'),
+    'PASSWORD': getenv('PGPASSWORD'),
+    'HOST': getenv('PGHOST'),
+    'PORT': getenv('PGPORT', 5432),
+    'OPTIONS': {
+      'sslmode': 'require',
+    },
+  }
 }
 
 
@@ -126,3 +142,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://a3a8f634-39b0-4528-9688-37b23a8c2290-00-1f5ik2igsvdfq.janeway.replit.dev',
+
+]
