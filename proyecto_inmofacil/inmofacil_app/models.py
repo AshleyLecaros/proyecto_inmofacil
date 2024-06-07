@@ -53,7 +53,7 @@ class Inmueble(models.Model):
     m2_terreno = models.CharField(max_length=20, null=False, blank=False)
     cantidad_estacionamiento = models.CharField(max_length=10, null=False, blank=False)
     cantidad_baños = models.CharField(max_length=10, null=False, blank=False)
-    direccion_id = models.ForeignKey('direccion', on_delete=models.CASCADE,related_name='inmueble', null=False, blank=False)
+    direccion_id = models.ForeignKey('direccion', on_delete=models.CASCADE,related_name='inmueble', null=False,          blank=False)
     tipo_inmueble_choice= [
         ('casa', 'Casa'),
         ('departamento', 'Departamento'),
@@ -61,7 +61,7 @@ class Inmueble(models.Model):
     ] # choices es una lista de tuplas donde cada tupla contiene dos valores: el valor almacenado en la base de datos y la etiqueta legible que se mostrará en los formularios de Django.(define las opciones permitidas)
     tipo_inmueble = models.CharField(max_length=20, choices= tipo_inmueble_choice, null=False, blank=False)
     valor_mensual = models.FloatField(max_length=50, null=False, blank=False)
-
+    foto_url = models.URLField()
     
     def __str__(self):
         return self.nombre

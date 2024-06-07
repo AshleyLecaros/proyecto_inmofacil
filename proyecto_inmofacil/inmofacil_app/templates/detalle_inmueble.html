@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block detalle_inmueble %}
+<section class="container bg-light" id="detalle_inmueble">
+    <h2 class="text-center fw-bold pt-3 pb-4">Detalle del Inmueble</h2>
+    <div class="card mb-4">
+        <img src="{{ inmueble.foto_url }}" class="card-img-top" alt="{{ inmueble.nombre }}" />
+        <div class="card-body">
+            <h5 class="card-title fw-bold">{{ inmueble.nombre }}</h5>
+            <p class="card-text">{{ inmueble.descripcion }}</p>
+            <p class="card-text">{{ inmueble.direccion_id.calle }} {{ inmueble.direccion_id.numero }}, {{ inmueble.direccion_id.comuna_id.nombre }}</p>
+            <p class="card-text">{{ inmueble.tipo_inmueble }} - {{ inmueble.valor_mensual }} CLP</p>
+            <p class="card-text">Metros construidos: {{ inmueble.m2_contruidos }}</p>
+            <p class="card-text">Metros de terreno: {{ inmueble.m2_terreno }}</p>
+            <p class="card-text">Cantidad de estacionamientos: {{ inmueble.cantidad_estacionamiento }}</p>
+            <p class="card-text">Cantidad de baños: {{ inmueble.cantidad_baños }}</p>
+            <a href="{% url 'inmuebles_disponibles' %}" class="btn btn-primary">Volver a Inmuebles Disponibles</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

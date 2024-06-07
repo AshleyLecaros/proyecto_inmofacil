@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegistroInmuebleForm, BusquedaInmuebleForm
 from .models import Inmueble
 
@@ -38,21 +38,33 @@ def busqueda_inmueble(request):
 
 def inmuebles_disponibles(request):
     inmuebles = Inmueble.objects.all()
-    if request.method == 'GET':
-        form = BusquedaInmuebleForm(request.GET)
-        if form.is_valid():
-            region = form.cleaned_data.get('region')
-            comuna = form.cleaned_data.get('comuna')
-            tipo_inmueble = form.cleaned_data.get('tipo_inmueble')
-            precio_max = form.cleaned_data.get('precio_max')
-            if region:
-                inmuebles = inmuebles.filter(direccion_id__comuna_id__region_id=region)
-            if comuna:
-                inmuebles = inmuebles.filter(direccion_id__comuna_id=comuna)
-            if tipo_inmueble:
-                inmuebles = inmuebles.filter(tipo_inmueble=tipo_inmueble)
-            if precio_max:
-                inmuebles = inmuebles.filter(valor_mensual__lte=precio_max)
-    else:
-        form = BusquedaInmuebleForm()
-    return render(request, 'inmuebles_disponibles.html', {'form': form, 'inmuebles': inmuebles})
+    form = BusquedaInmuebleForm(request.GET or None)
+
+    if form.is_valid():
+        region = form.cleaned_data.get('region')
+        comuna = form.cleaned_data.get('comuna')
+        tipo_inmueble = form.cleaned_data.get('tipo_inmueble')
+        precio_max = form.cleaned_data.get('precio_max')
+
+        if region:
+            inmuebles = inmuebles.filter(direccion_id__comuna_id__region_id=region)
+        if comuna:
+            inmuebles = inmuebles.filter(direccion_id__comuna_id=comuna)
+        if tipo_inmueble:
+            inmuebles = inmuebles.filter(tipo_inmueble=tipo_inmueble)
+        if precio_max:
+            inmuebles = inmuebles.filter(valor_mensual__lte=precio_max)
+
+    context = {
+        'form': form,
+        'inmuebles': inmuebles
+    }
+
+    return render(request, 'inmuebles_disponibles.html', context)
+
+def detalle_inmueble(request, inmueble_id):
+    inmueble = get_object_or_404(Inmueble, inmueble_id=inmueble_id)
+    context = {
+        'inmueble': inmueble
+    }
+    return render(request, 'detalle_inmueble.html', context)

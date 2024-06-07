@@ -1,23 +1,33 @@
 {% extends 'base.html' %}
 
 {% block inmuebles_disponibles %}
-<h1>Inmuebles Disponibles</h1>
-<form method="GET">
-  {{ form.as_p }}
-  <button type="submit">Buscar</button>
-</form>
-
-<h2>Inmuebles Disponibles</h2>
-<ul>
-  {% for inmueble in inmuebles %}
-    <li>
-      <strong>{{ inmueble.nombre }}</strong><br>
-      {{ inmueble.descripcion }}<br>
-      {{ inmueble.direccion_id.calle }} {{ inmueble.direccion_id.numero }}, {{ inmueble.direccion_id.comuna_id.nombre }}<br>
-      {{ inmueble.tipo_inmueble }} - {{ inmueble.valor_mensual }} CLP
-    </li>
-  {% empty %}
-    <li>No hay inmuebles disponibles en esta comuna.</li>
-  {% endfor %}
-</ul>
+<section class="container bg-light" id="inmuebles">
+    <h2 class="text-center fw-bold pt-3 pb-4">Inmuebles Disponibles</h2>
+    <form method="GET" class="mb-4">
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+    <!-- cartas -->
+    <div class="row">
+        {% for inmueble in inmuebles %}
+        <div class="col-sm-4 col-12 mb-4">
+            <div class="card h-100">
+                <img src="{{ inmueble.foto_url }}" class="card-img-top" alt="{{ inmueble.nombre }}">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">{{ inmueble.nombre }}</h5>
+                    <p class="card-text">{{ inmueble.descripcion }}</p>
+                    <p class="card-text">{{ inmueble.direccion_id.calle }} {{ inmueble.direccion_id.numero }}, {{ inmueble.direccion_id.comuna_id.nombre }}</p>
+                    <p class="card-text">{{ inmueble.tipo_inmueble }} - {{ inmueble.valor_mensual }} CLP</p>
+                    <a href="{% url 'detalle_inmueble' inmueble_id=inmueble.inmueble_id %}" class="btn btn-primary">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p class="text-center">No hay inmuebles disponibles en esta comuna.</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
+
