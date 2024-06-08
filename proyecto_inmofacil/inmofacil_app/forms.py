@@ -33,3 +33,23 @@ class BusquedaInmuebleForm(forms.Form):
     tipo_inmueble = forms.ChoiceField(choices=Inmueble.tipo_inmueble_choice, required=False, label="Tipo de Inmueble")
     precio_max = forms.FloatField(required=False, label="Precio Máximo")
 
+class RegistroUsuarioForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput) #para que el campo se renderice como un campo de entrada de contraseña en HTML, ocultando los caracteres ingresados.
+
+    class Meta:
+        model = Usuario
+        fields = ['nombre', 'email', 'password'] #define una lista de campos del modelo que se incluirán en el formulario.
+
+    def clean_email(self): # Aquí se verifica si ya existe un usuario con el mismo email en la base de datos
+        email = self.cleaned_data.get('email')
+        if Usuario.objects.filter(email=email).exists():
+            raise forms.ValidationError('Este email ya está registrado.')
+        return email
+
+    def save(self, commit=True):
+        usuario = super().save(commit=False) #que crea una instancia del modelo Usuario, pero no la guarda en la base de datos aún.
+        usuario.set_password(self.cleaned_data['password']) #toma la contraseña ingresada y la convierte en una cadena de caracteres (el hash) segura.
+        if commit: #Si commit es True, se guarda finalmente la instancia en la base de datos.
+            usuario.save()
+        return usuario
+

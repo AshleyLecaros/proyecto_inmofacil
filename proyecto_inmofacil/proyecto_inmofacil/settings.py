@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 from os import getenv
 from dotenv import load_dotenv
 
@@ -65,7 +66,7 @@ ROOT_URLCONF = 'proyecto_inmofacil.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,3 +148,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://a3a8f634-39b0-4528-9688-37b23a8c2290-00-1f5ik2igsvdfq.janeway.replit.dev',
 
 ]
+
+LOGIN_REDIRECT_URL = 'inmuebles_disponibles'
+LOGOUT_REDIRECT_URL = '/'

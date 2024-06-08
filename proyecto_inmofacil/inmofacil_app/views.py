@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import RegistroInmuebleForm, BusquedaInmuebleForm
+from .forms import RegistroInmuebleForm, BusquedaInmuebleForm, RegistroUsuarioForm
 from .models import Inmueble
 
 # Create your views here.
@@ -68,3 +68,19 @@ def detalle_inmueble(request, inmueble_id):
         'inmueble': inmueble
     }
     return render(request, 'detalle_inmueble.html', context)
+
+def registro_usuario(request):
+    if request.method == 'POST':
+        form = RegistroUsuarioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('registro_exitoso') 
+    else:
+        form = RegistroUsuarioForm()
+
+    return render(request, 'registro_usuario.html', {'form': form})
+
+def registro_exitoso(request):
+    return render(request, 'registro_exitoso.html')
+
+

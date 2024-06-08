@@ -34,7 +34,7 @@ class Usuario(models.Model):
     apellido = models.CharField(max_length=50, null=False, blank=False)
     direccion_id = models.ForeignKey('direccion', on_delete=models.CASCADE,related_name='usuario', null=False, blank=False)
     telefono = models.CharField(max_length=20)
-    mail = models.EmailField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=50, null=False, blank=False)
     tipo_de_usuario_choice = [
         ('arrendador', 'Arrendador'),
         ('arrendatario', 'Arrendatario'),
