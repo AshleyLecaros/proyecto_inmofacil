@@ -30,16 +30,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active text-black" aria-current="page" href="/">Index</a>
+                <a class="nav-link active text-black" aria-current="page" href="/">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-black" href="about">About</a>
+                <a class="nav-link active text-black" href="busqueda_inmueble">Busqueda de inmueble</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-black" href="/welcome">Welcome</a>
+                <a class="nav-link active text-black" href="inmuebles_disponibles">Inmuebles disponibles</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-black" href="contact">Contact</a>
+                <a class="nav-link active text-black" href="registro_usuario">Registrate</a>
               </li>
             </ul>
           </div>
@@ -59,6 +59,9 @@
       {% endblock %}
       <!-- termino barra de navegacion -->
 
+    {% block index %}
+    {% endblock %}
+  
     {% block busqueda_inmueble %}
     {% endblock %}
 
@@ -82,7 +85,18 @@
 
     {% block registro_exitoso %}
     {% endblock %}
-    
+
+    {% block perfil %}
+    {% endblock %}
+
+    {% block editar_perfil %}
+    {% endblock %}
+
+    {% block mis_inmuebles %}
+    {% endblock %}
+
+    {% block editar_inmueble %}
+    {% endblock %}
     
 </body>
 </html>

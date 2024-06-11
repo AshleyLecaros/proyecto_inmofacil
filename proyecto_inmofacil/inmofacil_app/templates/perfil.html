@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block perfil %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2>Perfil de Usuario</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label"><strong>Nombre:</strong></label>
+                        <p class="form-control">{{ usuario.nombre }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><strong>Apellido:</strong></label>
+                        <p class="form-control">{{ usuario.apellido }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><strong>Teléfono:</strong></label>
+                        <p class="form-control">{{ usuario.telefono }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><strong>Email:</strong></label>
+                        <p class="form-control">{{ usuario.email }}</p>
+                    </div>
+                    {% if usuario.direccion_id %}
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Dirección:</strong></label>
+                            <p class="form-control">{{ usuario.direccion_id.calle }} {{ usuario.direccion_id.numero }} {{ usuario.direccion_id.departamento }}</p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Comuna:</strong></label>
+                            <p class="form-control">{{ usuario.direccion_id.comuna_id.nombre }}</p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Región:</strong></label>
+                            <p class="form-control">{{ usuario.direccion_id.comuna_id.region_id.nombre }}</p>
+                        </div>
+                    {% endif %}
+                    <div class="mb-3">
+                        <label class="form-label"><strong>Tipo de Usuario:</strong></label>
+                        <p class="form-control">{{ usuario.get_tipo_usuario_display }}</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="{% url 'editar_perfil' %}" class="btn btn-primary">Editar Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

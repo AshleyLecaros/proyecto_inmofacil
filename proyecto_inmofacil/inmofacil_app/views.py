@@ -1,22 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import RegistroInmuebleForm, BusquedaInmuebleForm, RegistroUsuarioForm
-from .models import Inmueble
+from .forms import RegistroInmuebleForm, BusquedaInmuebleForm, RegistroUsuarioForm, EditarUsuarioForm, EditarInmuebleForm
+from .models import Inmueble, Usuario
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 def index(request):
     return render(request, 'index.html')
 
-
-def registro_inmueble(request):
-    if request.method == 'POST':
-        form = RegistroInmuebleForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('inmueble_list')  # Redirige a la lista de inmuebles después de guardar
-    else:
-        form = RegistroInmuebleForm()
-    return render(request, 'registro_inmueble.html', {'form': form})
 
 def busqueda_inmueble(request):
     if request.method == 'POST':
@@ -74,13 +65,78 @@ def registro_usuario(request):
         form = RegistroUsuarioForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('registro_exitoso') 
+            return redirect('registro_exitoso')
     else:
         form = RegistroUsuarioForm()
 
     return render(request, 'registro_usuario.html', {'form': form})
 
+
 def registro_exitoso(request):
     return render(request, 'registro_exitoso.html')
+
+
+# Vista para ver el perfil del usuario.
+@login_required
+def perfil(request):
+    usuario = get_object_or_404(Usuario, email=request.user.email)
+    return render(request, 'perfil.html', {'usuario': usuario})
+
+# Vista para editar el perfil del usuario.
+@login_required
+def editar_perfil(request):
+    usuario = get_object_or_404(Usuario, email=request.user.email)
+    if request.method == 'POST':
+        form = EditarUsuarioForm(request.POST, instance=usuario)
+        if form.is_valid():
+            form.save()
+            return redirect('perfil')
+    else:
+        form = EditarUsuarioForm(instance=usuario)
+    return render(request, 'editar_perfil.html', {'form': form})
+
+# Vista para que el arrendador vea sus inmuebles.
+@login_required
+def mis_inmuebles(request):
+    usuario = get_object_or_404(Usuario, rut=request.user.username)
+    if usuario.tipo_usuario != 'arrendador':
+        return redirect('perfil')
+
+    inmuebles = Inmueble.objects.filter(direccion_id__usuario=usuario)
+    return render(request, 'mis_inmuebles.html', {'inmuebles': inmuebles})
+
+# Vista para que el arrendador registre un nuevo inmueble.
+@login_required
+def registro_inmueble(request):
+    usuario = get_object_or_404(Usuario, rut=request.user.username)
+    if usuario.tipo_usuario != 'arrendador':
+        return redirect('perfil')
+
+    if request.method == 'POST':
+        form = RegistroInmuebleForm(request.POST)
+        if form.is_valid():
+            inmueble = form.save(commit=False)
+            inmueble.save()
+            return redirect('mis_inmuebles')
+    else:
+        form = RegistroInmuebleForm()
+    return render(request, 'registro_inmueble.html', {'form': form})
+
+# Vista para editar un inmueble existente del arrendador.
+@login_required
+def editar_inmueble(request, inmueble_id):
+    usuario = get_object_or_404(Usuario, rut=request.user.username)
+    if usuario.tipo_usuario != 'arrendador':
+        return redirect('perfil')
+
+    inmueble = get_object_or_404(Inmueble, inmueble_id=inmueble_id)
+    if request.method == 'POST':
+        form = EditarInmuebleForm(request.POST, instance=inmueble)
+        if form.is_valid():
+            form.save()
+            return redirect('inmueble_detalle', inmueble_id=inmueble.inmueble_id)
+    else:
+        form = EditarInmuebleForm(instance=inmueble)
+    return render(request, 'editar_inmueble.html', {'form': form})
 
 

@@ -149,5 +149,6 @@ CSRF_TRUSTED_ORIGINS = [
 
 ]
 
-LOGIN_REDIRECT_URL = 'inmuebles_disponibles'
+LOGIN_REDIRECT_URL = 'perfil'
 LOGOUT_REDIRECT_URL = '/'
+AUTH_USER_MODEL = 'inmofacil_app.Usuario'
