@@ -115,10 +115,12 @@ def registro_inmueble(request):
         form = RegistroInmuebleForm(request.POST)
         if form.is_valid():
             inmueble = form.save(commit=False)
+            inmueble.propietario = usuario  # Asigna el propietario del inmueble
             inmueble.save()
             return redirect('mis_inmuebles')
     else:
         form = RegistroInmuebleForm()
+
     return render(request, 'registro_inmueble.html', {'form': form})
 
 # Vista para editar un inmueble existente del arrendador.

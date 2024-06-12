@@ -5,27 +5,36 @@ from django.contrib.auth.hashers import make_password
 # Clase para formulario de registro de inmueble 
 class RegistroInmuebleForm(forms.ModelForm):
     region = forms.ModelChoiceField(queryset=Region.objects.all(), required=True, label="Región")
-    comuna = forms.ModelChoiceField(queryset=Comuna.objects.all(), required=True, label="Comuna")
+    comuna_id = forms.ModelChoiceField(queryset=Comuna.objects.all(), required=True, label="Comuna")
     calle = forms.CharField(max_length=100, required=True, label="Calle")
     numero = forms.CharField(max_length=20, required=True, label="Número")
     departamento = forms.CharField(max_length=10, required=False, label="Departamento")
 
     class Meta:
         model = Inmueble
-        fields = ['nombre', 'descripcion', 'm2_contruidos', 'm2_terreno', 'cantidad_estacionamiento', 'cantidad_baños', 'tipo_inmueble', 'valor_mensual']
+        fields = ['nombre', 'descripcion', 'm2_contruidos', 'm2_terreno', 'cantidad_estacionamiento', 'cantidad_baños', 'tipo_inmueble', 'valor_mensual', 'foto_url' ]
 
     def save(self, commit=True):
+        # Guardamos el inmueble sin commit para poder añadir la dirección y el propietario antes de guardarlo en l base de datos.
         inmueble = super().save(commit=False)
+
+        # Creamos una nueva instancia de Dirección con los datos del formulario
         direccion = Direccion(
             calle=self.cleaned_data['calle'],
             numero=self.cleaned_data['numero'],
             departamento=self.cleaned_data.get('departamento', ''),
-            comuna=self.cleaned_data['comuna']
+            comuna_id=self.cleaned_data['comuna_id']
         )
+        # Guardamos la dirección en la base de datos
         direccion.save()
-        inmueble.direccion = direccion
+
+        # Asignamos la dirección al inmueble
+        inmueble.direccion_id = direccion
+
+        # Si commit es True, guardamos el inmueble en la base de datos
         if commit:
             inmueble.save()
+
         return inmueble
     
 class BusquedaInmuebleForm(forms.Form):

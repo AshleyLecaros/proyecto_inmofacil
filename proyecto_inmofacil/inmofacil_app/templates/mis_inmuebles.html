@@ -5,7 +5,7 @@
   <ul>
     {% for inmueble in inmuebles %}
       <li>
-        <a href="{% url 'inmueble_detalle' inmueble_id=inmueble.inmueble_id %}">{{ inmueble.nombre }}</a>
+        <a href="{% url 'detalle_inmueble' inmueble_id=inmueble.inmueble_id %}">{{ inmueble.nombre }}</a>
         <a href="{% url 'editar_inmueble' inmueble_id=inmueble.inmueble_id %}">Editar</a>
       </li>
     {% endfor %}
