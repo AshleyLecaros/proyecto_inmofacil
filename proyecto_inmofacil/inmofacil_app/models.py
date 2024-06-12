@@ -79,6 +79,19 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return f"{self.nombre} {self.apellido} ({self.tipo_usuario})"
 
+# Asignar roles automáticamente a un usuario nuevo.
+User = get_user_model()
+
+@receiver(post_save, sender=Usuario)
+def asignar_roles_a_usuario(sender, instance, created, **kwargs):
+    if created:
+        if instance.tipo_usuario == 'arrendador':
+            arrendador_group, created = Group.objects.get_or_create(name='Arrendador')
+            instance.groups.add(arrendador_group)
+        elif instance.tipo_usuario == 'arrendatario':
+            arrendatario_group, created = Group.objects.get_or_create(name='Arrendatario')
+            instance.groups.add(arrendatario_group)
+
 
     
 class Inmueble(models.Model):
@@ -98,6 +111,8 @@ class Inmueble(models.Model):
     tipo_inmueble = models.CharField(max_length=20, choices= tipo_inmueble_choice, null=False, blank=False)
     valor_mensual = models.FloatField(max_length=50, null=False, blank=False)
     foto_url = models.URLField()
+    propietario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='inmuebles_propiedad', 
+    null=False, blank=False)
     
     def __str__(self):
         return self.nombre

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegistroInmuebleForm, BusquedaInmuebleForm, RegistroUsuarioForm, EditarUsuarioForm, EditarInmuebleForm
-from .models import Inmueble, Usuario
+from .models import Inmueble, Usuario, Direccion
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -98,17 +98,16 @@ def editar_perfil(request):
 # Vista para que el arrendador vea sus inmuebles.
 @login_required
 def mis_inmuebles(request):
-    usuario = get_object_or_404(Usuario, rut=request.user.username)
+    usuario = get_object_or_404(Usuario, email=request.user.email)
     if usuario.tipo_usuario != 'arrendador':
         return redirect('perfil')
 
-    inmuebles = Inmueble.objects.filter(direccion_id__usuario=usuario)
+    inmuebles = Inmueble.objects.filter(propietario=usuario)
     return render(request, 'mis_inmuebles.html', {'inmuebles': inmuebles})
-
 # Vista para que el arrendador registre un nuevo inmueble.
 @login_required
 def registro_inmueble(request):
-    usuario = get_object_or_404(Usuario, rut=request.user.username)
+    usuario = get_object_or_404(Usuario, email=request.user.email)
     if usuario.tipo_usuario != 'arrendador':
         return redirect('perfil')
 
@@ -125,7 +124,7 @@ def registro_inmueble(request):
 # Vista para editar un inmueble existente del arrendador.
 @login_required
 def editar_inmueble(request, inmueble_id):
-    usuario = get_object_or_404(Usuario, rut=request.user.username)
+    usuario = get_object_or_404(Usuario, email=request.user.email)
     if usuario.tipo_usuario != 'arrendador':
         return redirect('perfil')
 

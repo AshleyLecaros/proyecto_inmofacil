@@ -81,29 +81,30 @@ class EditarUsuarioForm(forms.ModelForm):
     # Inicializa el formulario con los datos actuales del usuario y su dirección.
     def __init__(self, *args, **kwargs):
         super(EditarUsuarioForm, self).__init__(*args, **kwargs)
-        if self.instance and self.instance.direccion_id:
-            self.fields['calle'].initial = self.instance.direccion_id.calle
-            self.fields['numero'].initial = self.instance.direccion_id.numero
-            self.fields['departamento'].initial = self.instance.direccion_id.departamento
-            self.fields['comuna'].initial = self.instance.direccion_id.comuna_id
+        if hasattr(self.instance, 'direccion'):
+            self.fields['calle'].initial = self.instance.direccion.calle
+            self.fields['numero'].initial = self.instance.direccion.numero
+            self.fields['departamento'].initial = self.instance.direccion.departamento
+            self.fields['comuna'].initial = self.instance.direccion.comuna
 
     # Guarda los datos del formulario, actualizando o creando la dirección según sea necesario.
     def save(self, commit=True):
         user = super().save(commit=False)
         if commit:
-            if not user.direccion_id:
+            if not hasattr(user, 'direccion'):
                 direccion = Direccion()
             else:
-                direccion = user.direccion_id
+                direccion = user.direccion
 
             direccion.calle = self.cleaned_data['calle']
             direccion.numero = self.cleaned_data['numero']
             direccion.departamento = self.cleaned_data.get('departamento', '')
-            direccion.comuna_id = self.cleaned_data['comuna']
+            direccion.comuna = self.cleaned_data['comuna']
             direccion.save()
-            user.direccion_id = direccion
+            user.direccion = direccion
             user.save()
         return user
+        
 
 class EditarInmuebleForm(forms.ModelForm):
     class Meta:
