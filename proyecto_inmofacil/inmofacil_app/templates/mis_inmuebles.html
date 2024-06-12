@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block mis_inmuebles %}
+  <h2>Mis Inmuebles</h2>
+  <ul>
+    {% for inmueble in inmuebles %}
+      <li>
+        <a href="{% url 'inmueble_detalle' inmueble_id=inmueble.inmueble_id %}">{{ inmueble.nombre }}</a>
+        <a href="{% url 'editar_inmueble' inmueble_id=inmueble.inmueble_id %}">Editar</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

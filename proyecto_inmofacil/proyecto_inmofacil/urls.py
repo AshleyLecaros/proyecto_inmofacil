@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from inmofacil_app.views import index, registro_inmueble, busqueda_inmueble, inmuebles_disponibles
+from django.conf.urls import include
+from inmofacil_app.views import index, registro_inmueble, busqueda_inmueble, inmuebles_disponibles, detalle_inmueble, registro_usuario, registro_exitoso, perfil, editar_perfil, mis_inmuebles, editar_inmueble
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +25,13 @@ urlpatterns = [
     path("registro_inmueble", registro_inmueble, name='registro_inmueble'),
     path("busqueda_inmueble", busqueda_inmueble, name='busqueda_inmueble'),
     path("inmuebles_disponibles", inmuebles_disponibles, name='inmuebles_disponibles'),
-    
+    path('inmuebles/<int:inmueble_id>/', detalle_inmueble, name='detalle_inmueble'),
+    path('registro_usuario/', registro_usuario, name='registro_usuario'),
+    path('registro_exitoso', registro_exitoso, name='registro_exitoso'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('perfil/', perfil, name='perfil'),
+    path('perfil/editar/', editar_perfil, name='editar_perfil'),
+    path('mis_inmuebles/', mis_inmuebles, name='mis_inmuebles'),
+    path('inmueble/<int:inmueble_id>/editar/', editar_inmueble, name='editar_inmueble'),
+  
 ]

@@ -1,0 +1,14 @@
+body{
+    font-family: "open sans", sans-serif;
+    margin-top: 60px;
+}
+
+.card-img-top {
+  width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+  height: 300px; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+  object-fit: cover;
+}
+
+.card {
+  height: 100%;
+}
