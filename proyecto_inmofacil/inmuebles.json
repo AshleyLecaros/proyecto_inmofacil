@@ -71,7 +71,10 @@
             "cantidad_baños": "2",
             "direccion_id": 1,
             "tipo_inmueble": "casa",
-            "valor_mensual": 500000.0
+            "valor_mensual": 500000.0,
+            "foto_url":"https://http2.mlstatic.com/D_NQ_NP_604749-MLC42306051291_062020-O.webp",
+            "propietario":"3333333333"
+            
         }
     },
     {
@@ -86,7 +89,9 @@
             "cantidad_baños": "3",
             "direccion_id": 2,
             "tipo_inmueble": "casa",
-            "valor_mensual": 700000.0
+            "valor_mensual": 700000.0,
+            "foto_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Sce-8q95USyNFq01wFvKQiLKh9IXLYS5ng&s",
+            "propietario":"3333333333"
         }
     },
     {
@@ -101,7 +106,9 @@
             "cantidad_baños": "1",
             "direccion_id": 3,
             "tipo_inmueble": "departamento",
-            "valor_mensual": 300000.0
+            "valor_mensual": 300000.0,
+            "foto_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqTE4yrIklsmVWKktQWcd4vc-aWBePyqPuqw&s",
+            "propietario":"3333333333"
         }
     },
     {
@@ -116,7 +123,9 @@
             "cantidad_baños": "2",
             "direccion_id": 4,
             "tipo_inmueble": "departamento",
-            "valor_mensual": 400000.0
+            "valor_mensual": 400000.0,
+            "foto_url":"https://http2.mlstatic.com/D_NQ_NP_766438-MLC75223256781_032024-O.webp",
+            "propietario":"3333333333"
         }
     },
     {
@@ -131,7 +140,9 @@
             "cantidad_baños": "3",
             "direccion_id": 5,
             "tipo_inmueble": "parcela",
-            "valor_mensual": 200000.0
+            "valor_mensual": 200000.0,
+            "foto_url":"https://http2.mlstatic.com/D_NQ_NP_740345-MLC72839389562_112023-O.webp",
+            "propietario":"3333333333"
         }
     },
     {
@@ -146,103 +157,10 @@
             "cantidad_baños": "2",
             "direccion_id": 6,
             "tipo_inmueble": "parcela",
-            "valor_mensual": 250000.0
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "11111111-1",
-        "fields": {
-            "nombre": "Juan",
-            "apellido": "Pérez",
-            "direccion_id": 1,
-            "telefono": "123456789",
-            "mail": "juan.perez@example.com",
-            "tipo_usuario": "arrendador"
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "22222222-2",
-        "fields": {
-            "nombre": "María",
-            "apellido": "González",
-            "direccion_id": 2,
-            "telefono": "987654321",
-            "mail": "maria.gonzalez@example.com",
-            "tipo_usuario": "arrendador"
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "33333333-3",
-        "fields": {
-            "nombre": "Carlos",
-            "apellido": "Ramírez",
-            "direccion_id": 3,
-            "telefono": "456123789",
-            "mail": "carlos.ramirez@example.com",
-            "tipo_usuario": "arrendador"
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "44444444-4",
-        "fields": {
-            "nombre": "Ana",
-            "apellido": "Martínez",
-            "direccion_id": 4,
-            "telefono": "321654987",
-            "mail": "ana.martinez@example.com",
-            "tipo_usuario": "arrendador"
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "55555555-5",
-        "fields": {
-            "nombre": "Luis",
-            "apellido": "Fernández",
-            "direccion_id": 5,
-            "telefono": "789123456",
-            "mail": "luis.fernandez@example.com",
-            "tipo_usuario": "arrendatario"
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "66666666-6",
-        "fields": {
-            "nombre": "Laura",
-            "apellido": "Rodríguez",
-            "direccion_id": 6,
-            "telefono": "654789321",
-            "mail": "laura.rodriguez@example.com",
-            "tipo_usuario": "arrendatario"
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "77777777-7",
-        "fields": {
-            "nombre": "Pedro",
-            "apellido": "Gómez",
-            "direccion_id": 1,
-            "telefono": "147258369",
-            "mail": "pedro.gomez@example.com",
-            "tipo_usuario": "arrendatario"
-        }
-    },
-    {
-        "model": "inmofacil_app.usuario",
-        "pk": "88888888-8",
-        "fields": {
-            "nombre": "Marta",
-            "apellido": "López",
-            "direccion_id": 2,
-            "telefono": "369258147",
-            "mail": "marta.lopez@example.com",
-            "tipo_usuario": "arrendatario"
+            "valor_mensual": 250000.0,
+            "foto_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIOvSqN9jl-EJFlgD9IzjGbgA2Gw_kCDHpg&s",
+            "propietario":"3333333333"
         }
     }
+    
 ]

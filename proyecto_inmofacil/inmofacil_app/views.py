@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import RegistroInmuebleForm, BusquedaInmuebleForm, RegistroUsuarioForm, EditarUsuarioForm, EditarInmuebleForm
-from .models import Inmueble, Usuario, Direccion
+from .forms import RegistroInmuebleForm, RegistroUsuarioForm, BusquedaInmuebleForm, EditarUsuarioForm, EditarInmuebleForm
+from .models import Inmueble, Usuario
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -8,24 +8,6 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'index.html')
 
-
-def busqueda_inmueble(request):
-    if request.method == 'POST':
-        form = BusquedaInmuebleForm(request.POST)
-        if form.is_valid():
-            inmuebles = Inmueble.objects.all()
-            if form.cleaned_data['region']:
-                inmuebles = inmuebles.filter(direccion__comuna__region=form.cleaned_data['region'])
-            if form.cleaned_data['comuna']:
-                inmuebles = inmuebles.filter(direccion__comuna=form.cleaned_data['comuna'])
-            if form.cleaned_data['tipo_inmueble']:
-                inmuebles = inmuebles.filter(tipo_inmueble=form.cleaned_data['tipo_inmueble'])
-            if form.cleaned_data['precio_max']:
-                inmuebles = inmuebles.filter(valor_mensual__lte=form.cleaned_data['precio_max'])
-            return render(request, 'resultados_busqueda.html', {'inmuebles': inmuebles})
-    else:
-        form = BusquedaInmuebleForm()
-    return render(request, 'busqueda_inmueble.html', {'form': form})
 
 def inmuebles_disponibles(request):
     inmuebles = Inmueble.objects.all()
@@ -135,7 +117,7 @@ def editar_inmueble(request, inmueble_id):
         form = EditarInmuebleForm(request.POST, instance=inmueble)
         if form.is_valid():
             form.save()
-            return redirect('inmueble_detalle', inmueble_id=inmueble.inmueble_id)
+            return redirect('detalle_inmueble', inmueble_id=inmueble.inmueble_id)
     else:
         form = EditarInmuebleForm(instance=inmueble)
     return render(request, 'editar_inmueble.html', {'form': form})

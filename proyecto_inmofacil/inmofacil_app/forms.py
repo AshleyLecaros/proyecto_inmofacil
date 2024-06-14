@@ -76,41 +76,15 @@ class RegistroUsuarioForm(forms.ModelForm):
             usuario.save()
         return usuario
 
-# Formulario para editar los datos del usuario, incluyendo la dirección.
+# Formulario para editar los datos del usuario.
 class EditarUsuarioForm(forms.ModelForm):
-    calle = forms.CharField(max_length=100, required=True)
-    numero = forms.CharField(max_length=20, required=True)
-    departamento = forms.CharField(max_length=10, required=False)
-    comuna = forms.ModelChoiceField(queryset=Comuna.objects.all(), required=True)
-
     class Meta:
         model = Usuario
-        fields = ['nombre', 'apellido', 'telefono', 'email', 'tipo_usuario']
+        fields = ['nombre', 'apellido', 'rut', 'telefono', 'email', 'tipo_usuario']
 
-    # Inicializa el formulario con los datos actuales del usuario y su dirección.
-    def __init__(self, *args, **kwargs):
-        super(EditarUsuarioForm, self).__init__(*args, **kwargs)
-        if hasattr(self.instance, 'direccion'):
-            self.fields['calle'].initial = self.instance.direccion.calle
-            self.fields['numero'].initial = self.instance.direccion.numero
-            self.fields['departamento'].initial = self.instance.direccion.departamento
-            self.fields['comuna'].initial = self.instance.direccion.comuna
-
-    # Guarda los datos del formulario, actualizando o creando la dirección según sea necesario.
     def save(self, commit=True):
         user = super().save(commit=False)
         if commit:
-            if not hasattr(user, 'direccion'):
-                direccion = Direccion()
-            else:
-                direccion = user.direccion
-
-            direccion.calle = self.cleaned_data['calle']
-            direccion.numero = self.cleaned_data['numero']
-            direccion.departamento = self.cleaned_data.get('departamento', '')
-            direccion.comuna = self.cleaned_data['comuna']
-            direccion.save()
-            user.direccion = direccion
             user.save()
         return user
         
